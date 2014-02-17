@@ -35,12 +35,12 @@ options, and **should** at least define a template URL.
 
 Here are the default values that you may override:
 
-{
-    "title": "untitled",
-    "content_id": "content",
-    "template": "/static/template.html",
-    "css": []
-}
+    {
+        "title": "untitled",
+        "content_id": "content",
+        "template": "/static/template.html",
+        "css": []
+    }
 
 Add as many CSS you want (they can be local or remote).
 
@@ -58,9 +58,27 @@ Add the JS import (at the bottom or the top, whatever). Save it.
 If you load this page via a web server, you'll see its content nicely rendered
 in HTML, and styles with your stylesheet.
 
+### Example
+
+    <script src="/static/js/mdwrangler.js"></script>
+
+    ## Text
+
+    It's very easy to make some words **bold** and other words *italic* with
+    Markdown. You can even [link to Google!](http://google.com).
+
+    ## Lists
+
+    Sometimes you want numbered lists:
+
+    1. One
+    2. Two
+    3. Three
+
+
 ----
 
 ## License
 
-``mdwrangler`` is being pubished under the terms of the MIT License. See
-the LICENSE file for more information.
+``mdwrangler`` is (c) 2014 - Bruno Bord and is published under the terms of the
+MIT License. See the LICENSE file for more information.
