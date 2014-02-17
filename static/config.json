@@ -1,0 +1,14 @@
+{
+    "marked": {
+      "gfm": true,
+      "tables": true,
+      "breaks": true,
+      "pedantic": false,
+      "sanitize": false,
+      "smartLists": true,
+      "smartypants": false
+    },
+    "title": "Here it is",
+    "content_id": "main_content",
+    "css": ["/static/css/style.css"]
+}
