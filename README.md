@@ -38,7 +38,7 @@ Here are the default values that you may override:
     {
         "title": "untitled",
         "content_id": "content",
-        "template": "/static/template.html",
+        "template": "static/template.html",
         "css": []
     }
 
@@ -60,7 +60,7 @@ in HTML, and styles with your stylesheet.
 
 ### Example
 
-    <script src="/static/js/mdwrangler.js"></script>
+    <script src="static/js/mdwrangler.js"></script>
 
     ## Text
 

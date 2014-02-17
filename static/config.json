@@ -10,5 +10,5 @@
     },
     "title": "Here it is",
     "content_id": "main_content",
-    "css": ["/static/css/style.css"]
+    "css": ["static/css/style.css"]
 }

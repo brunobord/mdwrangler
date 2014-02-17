@@ -15,7 +15,7 @@ $.getJSON('static/config.json', function(data) {
     // the HTML element ID where we want to inject content
     var content_id = data.content_id || 'content';
     // template URL
-    var template_url = data.template || "/static/template.html";
+    var template_url = data.template || "static/template.html";
 
     // Optional CSS loading
     for (var i = 0; i < data.css.length; i++) {
