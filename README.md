@@ -30,7 +30,11 @@ What do you think of it?
 
 ## Requirements
 
-I'm publishing the built JS (concatenated and uglified) so you don't have to bother with this. But if you intend to work on the build.js source or change things, you may need to install [Grunt](http://gruntjs.com/) in order to execute the ``uglify`` task (i.e. concatenate, compress and stuff the whole thing into a `mdwrangler.min.js` file).
+I'm publishing the built JS (concatenated and uglified) so you don't have to bother with this. But if you intend to work on the build.js source or change things, you may need to install [Grunt](http://gruntjs.com/) (locally or system-wide). Once you have it simply enter the following command:
+
+    npm install .
+
+You may now want to execute the default task to produce the minified ``mdwrangler.min.js`` file out of the expanded ones.
 
 ## Configuration
 
