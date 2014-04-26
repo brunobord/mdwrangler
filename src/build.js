@@ -4,8 +4,8 @@ function strip(html) {
    return tmp.textContent || tmp.innerText || "";
 }
 
-j('static/config.json', function(data) {
-    data = JSON.parse(data);
+j('get', 'static/config.json', function(data) {
+    data = JSON.parse(data.response);
     // marked options
     data.marked = data.marked || {};
     data.marked.renderer = new marked.Renderer();
@@ -25,7 +25,8 @@ j('static/config.json', function(data) {
     };
 
     // load template
-    j(template_url, function(html) {
+    j('get', template_url, function(html) {
+        html = html.response;
         // do not hesitate to remove Scripts, they shouldn't appear here.
         while ($('script').length > 0) {
           var scripts = $('script');

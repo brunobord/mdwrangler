@@ -204,27 +204,25 @@ var $ = function(
   )
 }
 
-
 /**
- * IE 5.5+, Firefox, Opera, Chrome, Safari XHR object
+ * by Mikhail Davydov
  *
- * @param string url
- * @param object callback
- * @param mixed data
- * @param null x
- * Extracted from https://gist.github.com/Xeoncross/7663273
+ *            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+ *                    Version 2, December 2004
+ * source: https://gist.github.com/azproduction/1625623
  */
-function j(url, callback, data, x) {
-  try {
-    x = new(this.XMLHttpRequest || ActiveXObject)('MSXML2.XMLHTTP.3.0');
-    x.open(data ? 'POST' : 'GET', url, 1);
-    x.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-    x.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    x.onreadystatechange = function () {
-      x.readyState > 3 && callback && callback(x.responseText, x);
-    };
-    x.send(data)
-  } catch (e) {
-    window.console && console.log(e);
-  }
-};
+var j = function(
+  m, // method - get, post, whatever
+  u, // url
+  c, // [callback] if passed -> asych call
+  d, // [post_data]
+  x
+) {
+    with(x=new XMLHttpRequest)
+        return onreadystatechange=function(){ // filter only readyState=4 events
+            readyState^4||c(this) // if callback passed and readyState == 4 than trigger Callback with xhr object
+        },
+        open(m,u,c), // open connection with Method and Url and asyCh flag
+        send(d), // send Data
+        x
+}
