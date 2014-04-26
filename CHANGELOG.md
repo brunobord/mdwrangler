@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.2
+
+* switched to [another version of the XHR tool](https://gist.github.com/azproduction/1625623).
+
 ## v1.0.1
 
 * switched to a slightly modified version of [140medley.js](https://github.com/honza/140medley) to load everything faster. This version is completely compatible with the previous one.
