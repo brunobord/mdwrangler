@@ -205,18 +205,15 @@ var $ = function(
 }
 
 
-/*
- * Get cross browser xhr object
+/**
+ * IE 5.5+, Firefox, Opera, Chrome, Safari XHR object
  *
- *
- *            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
- *                    Version 2, December 2004
- *
- * Copyright (C) 2011 Jed Schmidt <http://jed.is>
- * More: https://gist.github.com/993585
- *
+ * @param string url
+ * @param object callback
+ * @param mixed data
+ * @param null x
+ * Extracted from https://gist.github.com/Xeoncross/7663273
  */
-
 function j(url, callback, data, x) {
   try {
     x = new(this.XMLHttpRequest || ActiveXObject)('MSXML2.XMLHTTP.3.0');
@@ -231,4 +228,3 @@ function j(url, callback, data, x) {
     window.console && console.log(e);
   }
 };
-
