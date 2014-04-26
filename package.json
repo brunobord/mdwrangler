@@ -1,0 +1,28 @@
+{
+  "name": "mdwrangler",
+  "version": "1.0.0",
+  "description": "Full markdown websites",
+  "main": "index.html",
+  "dependencies": {
+    "grunt-cli": "~0.1.13"
+  },
+  "devDependencies": {
+    "grunt-contrib-uglify": "~0.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brunobord/mdwrangler.git"
+  },
+  "keywords": [
+    "markdown"
+  ],
+  "author": "Bruno Bord",
+  "license": "Public Domain",
+  "bugs": {
+    "url": "https://github.com/brunobord/mdwrangler/issues"
+  },
+  "homepage": "https://github.com/brunobord/mdwrangler"
+}
