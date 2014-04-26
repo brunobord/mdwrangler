@@ -28,6 +28,10 @@ What do you think of it?
 
 ----
 
+## Requirements
+
+I'm publishing the built JS (concatenated and uglified) so you don't have to bother with this. But if you intend to work on the build.js source or change things, you may need to install [Grunt](http://gruntjs.com/) in order to execute the ``uglify`` task (i.e. concatenate, compress and stuff the whole thing into a `mdwrangler.min.js` file).
+
 ## Configuration
 
 You'll at least need a ``static/config.json``. It **may** host the the marked
