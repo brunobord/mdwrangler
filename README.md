@@ -68,7 +68,7 @@ in HTML, and styles with your stylesheet.
 
 ### Example
 
-    <script src="static/js/mdwrangler.js"></script>
+    <script src="static/js/mdwrangler.min.js"></script>
 
     ## Text
 
@@ -83,6 +83,10 @@ in HTML, and styles with your stylesheet.
     2. Two
     3. Three
 
+### What did I use?
+
+* markdown conversion with [marked.js](https://github.com/chjj/marked),
+* super-ultra-lightning-fast DOM manipulation and Ajax querying using [140medley](https://github.com/honza/140medley), with an [alternate version of the XHR tool](https://gist.github.com/Xeoncross/7663273)
 
 ----
 

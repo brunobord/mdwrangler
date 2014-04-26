@@ -7,12 +7,12 @@ module.exports = function(grunt) {
                 files: {
                     'dist/build.min.js': ['src/build.js'],
                     'dist/marked.min.js': ['src/marked.js'],
-                    'dist/zepto.min.js': ['src/zepto.js'],
+                    'dist/140medley.min.js': ['src/140medley.js'],
                 }
             },
             dist: {
                 files: {
-                    'static/js/mdwrangler.min.js': ['src/zepto.js', 'src/marked.js', 'src/build.js'],
+                    'static/js/mdwrangler.min.js': ['src/140medley.js', 'src/marked.js', 'src/build.js'],
                 }
             }
         }

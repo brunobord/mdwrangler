@@ -4,8 +4,8 @@ function strip(html) {
    return tmp.textContent || tmp.innerText || "";
 }
 
-$.getJSON('static/config.json', function(data) {
-
+j('static/config.json', function(data) {
+    data = JSON.parse(data);
     // marked options
     data.marked = data.marked || {};
     data.marked.renderer = new marked.Renderer();
@@ -20,22 +20,28 @@ $.getJSON('static/config.json', function(data) {
     // Optional CSS loading
     for (var i = 0; i < data.css.length; i++) {
       var css = data.css[i];
-      $('head').append('<link rel="stylesheet" href="'+css+'" type="text/css" />');
+      var el = m('<link rel="stylesheet" href="'+css+'" type="text/css" />');
+      document.head.appendChild(el);
     };
 
     // load template
-    $.get(template_url, function(html) {
+    j(template_url, function(html) {
         // do not hesitate to remove Scripts, they shouldn't appear here.
-        $('body script').remove();
+        while ($('script').length > 0) {
+          var scripts = $('script');
+          var scr = scripts[0];
+          scr.remove();
+        }
+
         // get "pure" markdown
-        var md = $('body').html();
+        var md = $('body')[0].innerHTML;
         // Strip it and parse it into HTML content
         marked(strip(md), data.marked, function(err, converted) {
           // Body content is swapped with template content
-          $('body').html(html);
+          $('body')[0].innerHTML = html;
           // Converted content is injected in the content element.
-          $('#'+content_id).html(converted);
+          var content_el = $('#'+content_id);
+          content_el.innerHTML = converted;
         });
     });
-
 });
