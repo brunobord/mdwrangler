@@ -1,3 +1,5 @@
+// Hiding body to avoid the "flick" effect
+$('body')[0].setAttribute('style', 'display: none');
 function strip(html) {
    var tmp = document.createElement("div");
    tmp.innerHTML = html;
@@ -43,6 +45,8 @@ j('get', 'static/config.json', function(data) {
           // Converted content is injected in the content element.
           var content_el = $('#'+content_id);
           content_el.innerHTML = converted;
+          // Everything's ready, please display the HTML page
+          $('body')[0].removeAttribute('style');
         });
     });
 });
