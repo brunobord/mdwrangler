@@ -1,6 +1,6 @@
 {
   "name": "mdwrangler",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Full markdown websites",
   "main": "index.html",
   "dependencies": {

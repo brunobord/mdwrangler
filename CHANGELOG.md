@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.3
+
+* No more ugly flickering effect, hiding the markdown content at startup, and display the converted HTML when it's ready.
+
 ## v1.0.2
 
 * switched to [another version of the XHR tool](https://gist.github.com/azproduction/1625623).
