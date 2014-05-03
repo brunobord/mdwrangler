@@ -15,14 +15,34 @@ module.exports = function(grunt) {
                     'static/js/mdwrangler.min.js': ['src/140medley.js', 'src/marked.js', 'src/build.js'],
                 }
             }
+        },
+
+        connect: {
+            testserver: {
+                options: {
+                    port: 8000,
+                }
+            }
+        },
+
+        casperjs: {
+            options: {
+                async: {
+                    parallel: false
+                }
+            },
+            files: ['tests/casperjs/**/*.js']
         }
+
     });
 
 
     // Plugins
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-casperjs');
     // tasks
     grunt.registerTask('default', ['uglify']);
+    grunt.registerTask('test', ['connect:testserver', 'casperjs']);
 
 };
-
