@@ -29,12 +29,6 @@ j('get', 'static/config.json', function(data) {
     // load template
     j('get', template_url, function(html) {
         html = html.response;
-        // do not hesitate to remove Scripts, they shouldn't appear here.
-        while ($('script').length > 0) {
-          var scripts = $('script');
-          var scr = scripts[0];
-          scr.remove();
-        }
 
         // get "pure" markdown
         var md = $('body')[0].innerHTML;
@@ -45,6 +39,14 @@ j('get', 'static/config.json', function(data) {
           // Converted content is injected in the content element.
           var content_el = $('#'+content_id);
           content_el.innerHTML = converted;
+
+          // let's remove unwanted HTML elements, they shouldn't appear here.
+          while ($('.mdwrangler').length > 0) {
+            var scripts = $('.mdwrangler');
+            var scr = scripts[0];
+            scr.remove();
+          }
+
           // Everything's ready, please display the HTML page
           $('body')[0].removeAttribute('style');
         });
