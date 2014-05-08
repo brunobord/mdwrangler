@@ -8,4 +8,9 @@ dist:
 	uglifyjs -nc --output static/js/mdwrangler.min.js dist/mdwrangler.js
 	rm dist/mdwrangler.js
 
+test:
+	forever start server.js
+	casperjs test tests
+	forever stop server.js
+
 .PHONY: uglify dist
