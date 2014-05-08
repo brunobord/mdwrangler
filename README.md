@@ -30,11 +30,15 @@ What do you think of it?
 
 ## Requirements
 
-I'm publishing the built JS (concatenated and uglified) so you don't have to bother with this. But if you intend to work on the build.js source or change things, you may need to install [Grunt](http://gruntjs.com/) (locally or system-wide). Once you have it simply enter the following command:
+I'm publishing the built JS (concatenated and uglified) so you don't have to bother with this. But if you intend to work on the build.js source or change things, you may need to install all the needed dependencies, using the following command:
 
     npm install .
 
-You may now want to execute the default task to produce the minified ``mdwrangler.min.js`` file out of the expanded ones.
+### Available tasks
+
+* `uglify` (default): build the 3 ".min.js" files needed to play around with mdwrangler features. When it's ready, you can use `dist` to build a distributable file.
+* `dist`: build the ``mdwranger.min.js`` file that would be used in "production" files.
+* `test`: unit test mdwrangler with both ``index.html`` and ``test.html`` pages. Please not that the index page uses the fully minified filed while the test file uses the splitted scripts.
 
 ## Configuration
 
