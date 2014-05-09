@@ -36,9 +36,13 @@ I'm publishing the built JS (concatenated and uglified) so you don't have to bot
 
 ### Available tasks
 
+If you have ``make`` available on your system, you can perform one (or more) of these tasks.
+
 * `uglify` (default): build the 3 ".min.js" files needed to play around with mdwrangler features. When it's ready, you can use `dist` to build a distributable file.
 * `dist`: build the ``mdwranger.min.js`` file that would be used in "production" files.
 * `test`: unit test mdwrangler with both ``index.html`` and ``test.html`` pages. Please not that the index page uses the fully minified filed while the test file uses the splitted scripts.
+
+If ``make`` is not available on your system... well... I feel sorry for you.
 
 ## Configuration
 
