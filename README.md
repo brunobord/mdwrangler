@@ -76,7 +76,7 @@ in HTML, and styles with your stylesheet.
 
 ### Example
 
-    <script src="static/js/mdwrangler.min.js"></script>
+    <script class="mdwrangler" src="static/js/mdwrangler.min.js"></script>
 
     ## Text
 
@@ -90,6 +90,9 @@ in HTML, and styles with your stylesheet.
     1. One
     2. Two
     3. Three
+
+Please note the CSS class ``.mdwrangler``. Every DOM item with this class will be removed from the document.
+Every other DOM item will remain (scripts? css?).
 
 ### What did I use?
 
